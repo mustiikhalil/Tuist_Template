@@ -1,0 +1,17 @@
+--swiftversion 5.9
+
+# format
+--indent 2
+--maxwidth 80
+
+# options
+--self remove # redundantSelf
+--importgrouping testable-bottom # sortedImports
+--trimwhitespace always
+--indentcase false
+--ifdef no-indent #indent
+--wraparguments before-first # wrapArguments
+--wrapparameters before-first # wrapArguments
+
+# rules
+--rules wrap,todos,anyObjectProtocol,redundantParens,redundantReturn,redundantSelf,sortedImports,strongifiedSelf,trailingCommas,trailingSpace,wrapArguments,indent,wrapAttributes,void
