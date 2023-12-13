@@ -1,0 +1,1 @@
+Just my personal template for tuist generate, where we split the modules in a modules folder & having swift format rules

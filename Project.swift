@@ -2,7 +2,7 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let destinations: Destinations = [.iPhone, .mac]
-let name = "\(Targets.name)"
+let name = "App"
 
 let targets: [Target] = {
   var targets: [Target] = [
