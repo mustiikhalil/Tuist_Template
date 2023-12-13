@@ -23,7 +23,7 @@ let targets: [Target] = {
 
 // Creates our project using a helper function defined in ProjectDescriptionHelpers
 let project = Project(
-  name: name,
+  name: "\(Targets.name)",
   organizationName: "example.com",
   options: .options(
     automaticSchemesOptions: .enabled(
