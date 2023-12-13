@@ -1,14 +1,17 @@
 import ProjectDescription
 
 public enum Targets: CaseIterable {
+
+  public static let name = "name"
+
   case Kit, UI
 
   public var name: String {
     switch self {
     case .Kit:
-      "Kit"
+      "\(Targets.name)Kit"
     case .UI:
-      "UI"
+      "\(Targets.name)UI"
     }
   }
 
