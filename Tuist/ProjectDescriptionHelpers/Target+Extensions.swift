@@ -9,7 +9,7 @@ import ProjectDescription
 
 private extension DeploymentTargets {
   static var macOSAndiOS: DeploymentTargets {
-    .init(iOS: "17.0", macOS: "14.0")
+    .multiplatform(iOS: "17.2", macOS: "14.3")
   }
 }
 extension Target {
@@ -18,7 +18,7 @@ extension Target {
     target: Targets,
     destinations: Destinations
   ) -> Target {
-    Target(
+    .target(
       name: target.name,
       destinations: destinations,
       product: .framework,
@@ -35,7 +35,7 @@ extension Target {
     target: Targets,
     destinations: Destinations
   ) -> Target {
-    Target(
+    .target(
       name: "\(target.name)Tests",
       destinations: destinations,
       product: .unitTests,
@@ -80,11 +80,11 @@ extension Target {
       "UILaunchStoryboardName": "LaunchScreen",
     ]
 
-    let mainTarget = Target(
+    let mainTarget: Target = .target(
       name: name,
       destinations: destinations,
       product: .app,
-      bundleId: "com.example.\(name)",
+      bundleId: "se.mustiikhalil.\(name)",
       deploymentTargets: .macOSAndiOS,
       infoPlist: .extendingDefault(with: infoPlist),
       sources: ["Targets/\(name)/Sources/**"],
@@ -93,11 +93,11 @@ extension Target {
       dependencies: dependencies
     )
 
-    let testTarget = Target(
+    let testTarget: Target = .target(
       name: "\(name)Tests",
       destinations: destinations,
       product: .unitTests,
-      bundleId: "com.example.\(name)Tests",
+      bundleId: "se.mustiikhalil.\(name)Tests",
       deploymentTargets: .macOSAndiOS,
       infoPlist: .default,
       sources: ["Targets/\(name)/Tests/**"],

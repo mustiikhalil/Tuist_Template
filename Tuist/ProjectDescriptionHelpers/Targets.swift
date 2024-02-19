@@ -1,18 +1,13 @@
 import ProjectDescription
 
-public enum Targets: CaseIterable {
+public enum Targets: String, CaseIterable {
 
   public static let name = "name"
 
-  case Kit, UI
+  case userInterface = "UserInterface", core = "Core"
 
   public var name: String {
-    switch self {
-    case .Kit:
-      "\(Targets.name)Kit"
-    case .UI:
-      "\(Targets.name)UI"
-    }
+    self.rawValue
   }
 
   public var path: Path {

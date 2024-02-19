@@ -6,16 +6,16 @@ let name = "App"
 
 let targets: [Target] = {
   var targets: [Target] = [
-    .Kit,
-    .KitTests,
-    .UI,
-    .UITests,
+    .core,
+    .coreTests,
+    .userInterface,
+    .userInterfaceTests,
   ]
   targets.append(
     contentsOf: Target.app(
       name: name,
       destinations: destinations,
-      additionalTargets: [.Kit, .UI]
+      additionalTargets: [.core, .userInterface]
     )
   )
   return targets
