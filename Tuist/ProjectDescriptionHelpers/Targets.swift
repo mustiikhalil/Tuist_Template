@@ -2,12 +2,12 @@ import ProjectDescription
 
 public enum Targets: String, CaseIterable {
 
-  public static let name = "name"
+  public static let name = "App"
 
   case userInterface = "UserInterface", core = "Core"
 
   public var name: String {
-    self.rawValue
+    rawValue
   }
 
   public var path: Path {

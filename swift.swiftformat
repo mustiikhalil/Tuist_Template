@@ -6,7 +6,7 @@
 
 # options
 --self remove # redundantSelf
---importgrouping testable-bottom # sortedImports
+--importgrouping testable-bottom # sortImports
 --trimwhitespace always
 --indentcase false
 --ifdef no-indent #indent
@@ -14,5 +14,5 @@
 --wrapparameters before-first # wrapArguments
 
 # rules
---rules wrap,todos,anyObjectProtocol,redundantParens,redundantReturn,redundantSelf,sortedImports,strongifiedSelf,trailingCommas,trailingSpace,wrapArguments,indent,wrapAttributes,void
+--rules wrap,todos,anyObjectProtocol,redundantParens,redundantReturn,redundantSelf,sortImports,strongifiedSelf,trailingCommas,trailingSpace,wrapArguments,indent,wrapAttributes,void
 --rules trailingSpace,hoistAwait,hoistPatternLet,hoistTry,consecutiveSpaces,consecutiveBlankLines

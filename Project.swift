@@ -2,7 +2,6 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let destinations: Destinations = [.iPhone, .mac]
-let name = "App"
 
 let targets: [Target] = {
   var targets: [Target] = [
@@ -13,7 +12,7 @@ let targets: [Target] = {
   ]
   targets.append(
     contentsOf: Target.app(
-      name: name,
+      name: Targets.name,
       destinations: destinations,
       additionalTargets: [.core, .userInterface]
     )
@@ -24,7 +23,7 @@ let targets: [Target] = {
 // Creates our project using a helper function defined in ProjectDescriptionHelpers
 let project = Project(
   name: "\(Targets.name)",
-  organizationName: "example.com",
+  organizationName: "com.example",
   options: .options(
     automaticSchemesOptions: .enabled(
       codeCoverageEnabled: true,

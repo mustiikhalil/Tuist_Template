@@ -9,9 +9,10 @@ import ProjectDescription
 
 private extension DeploymentTargets {
   static var macOSAndiOS: DeploymentTargets {
-    .multiplatform(iOS: "17.2", macOS: "14.3")
+    .multiplatform(iOS: "17.2", macOS: "14.2")
   }
 }
+
 extension Target {
 
   public static func createTarget(
@@ -84,7 +85,7 @@ extension Target {
       name: name,
       destinations: destinations,
       product: .app,
-      bundleId: "se.mustiikhalil.\(name)",
+      bundleId: "com.example.\(name)",
       deploymentTargets: .macOSAndiOS,
       infoPlist: .extendingDefault(with: infoPlist),
       sources: ["Targets/\(name)/Sources/**"],
@@ -97,7 +98,7 @@ extension Target {
       name: "\(name)Tests",
       destinations: destinations,
       product: .unitTests,
-      bundleId: "se.mustiikhalil.\(name)Tests",
+      bundleId: "com.example.\(name)Tests",
       deploymentTargets: .macOSAndiOS,
       infoPlist: .default,
       sources: ["Targets/\(name)/Tests/**"],
